@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { getAllPosts, getPostBySlug } from '../../data/posts'
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const posts = getAllPosts()
   return posts.map((p) => ({ slug: p.slug }))
 }

@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { getAllPosts } from '../data/posts'
 
-export default async function Blog() {
-  const response = await fetch('http://localhost:3000/api/posts')
-  const posts = await response.json()
+export default function Blog() {
+  const posts = getAllPosts()
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

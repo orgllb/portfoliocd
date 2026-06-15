@@ -3,8 +3,15 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const dynamic = 'force-dynamic'
+
 async function getProducts() {
-  const res = await fetch('https://fakestoreapi.com/products')
+  const res = await fetch('https://fakestoreapi.com/products', {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+      'Accept': 'application/json',
+    },
+    cache: 'no-store',
+  })
 
   if (!res.ok) {
     throw new Error('Failed to fetch products')

@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export default function Contact() {
+function ContactForm() {
   const searchParams = useSearchParams()
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -88,5 +88,13 @@ export default function Contact() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+export default function Contact() {
+  return (
+    <Suspense fallback={null}>
+      <ContactForm />
+    </Suspense>
   )
 }

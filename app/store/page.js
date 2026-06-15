@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
+export const dynamic = 'force-dynamic'
 async function getProducts() {
   const res = await fetch('https://fakestoreapi.com/products')
 

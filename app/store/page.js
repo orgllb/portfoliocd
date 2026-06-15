@@ -1,17 +1,12 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export const dynamic = 'force-dynamic'
-
 async function getProducts() {
-  const res = await fetch('https://fakestoreapi.com/products', {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-      'Accept': 'application/json',
-    },
-    cache: 'no-store',
-  })
+  const res = await fetch('https://fakestoreapi.com/products')
 
   if (!res.ok) {
     throw new Error('Failed to fetch products')
@@ -20,13 +15,22 @@ async function getProducts() {
   return res.json()
 }
 
-export const metadata = {
-  title: "Peak'd Shop — Bat-Orgil Batbold",
-  description: "Shop the Peak'd collection — clothing and accessories from our independent lifestyle brand.",
-}
+export default function Store() {
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
-export default async function Store() {
-  const products = await getProducts()
+  useEffect(() => {
+    getProducts()
+      .then((data) => {
+        setProducts(data)
+        setLoading(false)
+      })
+      .catch((err) => {
+        setError(err.message)
+        setLoading(false)
+      })
+  }, [])
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -39,6 +43,14 @@ export default async function Store() {
         <p className="text-[11px] text-[#a8a8a1] leading-loose mb-16 max-w-xl">
           A rotating edit of Peakd essentials. Limited drops, no restocks.
         </p>
+
+        {loading && (
+          <p className="text-[11px] text-[#a8a8a1] mb-8">Loading products...</p>
+        )}
+
+        {error && (
+          <p className="text-[11px] text-[#a8a8a1] mb-8">Could not load products: {error}</p>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1a1a18]">
           {products.map((product) => (

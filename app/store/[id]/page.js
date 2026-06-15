@@ -1,17 +1,12 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export const dynamic = 'force-dynamic'
-
 async function getProduct(id) {
-  const res = await fetch('https://fakestoreapi.com/products/' + id, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-      'Accept': 'application/json',
-    },
-    cache: 'no-store',
-  })
+  const res = await fetch('https://fakestoreapi.com/products/' + id)
 
   if (!res.ok) {
     throw new Error('Failed to fetch product')
@@ -20,16 +15,46 @@ async function getProduct(id) {
   return res.json()
 }
 
-export async function generateMetadata({ params }) {
-  const product = await getProduct(params.id)
-  return {
-    title: product.title + " — Peak'd Shop",
-    description: product.description,
-  }
-}
+export default function ProductDetail({ params }) {
+  const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
-export default async function ProductDetail({ params }) {
-  const product = await getProduct(params.id)
+  useEffect(() => {
+    getProduct(params.id)
+      .then((data) => {
+        setProduct(data)
+        setLoading(false)
+      })
+      .catch((err) => {
+        setError(err.message)
+        setLoading(false)
+      })
+  }, [params.id])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 px-8 py-12">
+          <p className="text-[11px] text-[#a8a8a1]">Loading product...</p>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+
+  if (error || !product) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 px-8 py-12">
+          <p className="text-[11px] text-[#a8a8a1]">Could not load product: {error}</p>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -53,12 +78,12 @@ export default async function ProductDetail({ params }) {
               ${product.price}
             </p>
             <Link
-                href={`/contact?item=${encodeURIComponent(product.title)}`}
-                className="inline-block text-[11px] tracking-[0.2em] uppercase text-[#0a0a0a] bg-[#EBEBEB] px-8 py-3 hover:bg-[#cccccc] transition-colors mb-6"
+              href={`/contact?item=${encodeURIComponent(product.title)}`}
+              className="inline-block text-[11px] tracking-[0.2em] uppercase text-[#0a0a0a] bg-[#EBEBEB] px-8 py-3 hover:bg-[#cccccc] transition-colors mb-6"
             >
-                Enquire to Purchase
+              Enquire to Purchase
             </Link>
-            <p className="text-[12px] text-[#b8b8b1] leading-loose mb-6">
+            <p className="text-[12px] text-[#a8a8a1] leading-loose mb-6">
               {product.description}
             </p>
             <p className="text-[10px] text-[#8a8a84] uppercase">

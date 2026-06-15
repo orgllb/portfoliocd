@@ -15,7 +15,7 @@ export default function Work() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1 px-8 py-12">
-        <p className="text-[10px] text-[#444440] uppercase mb-4">Selected Work</p>
+        <p className="text-[10px] text-[#999992] uppercase mb-4">Selected Work</p>
         <h1 style={{ fontFamily: 'var(--font-display)' }} className="text-[6rem] text-[#EBEBEB] leading-none mb-16">
           Projects
         </h1>
@@ -27,12 +27,12 @@ export default function Work() {
               </div>
               <div className="flex justify-between items-start">
                 <div>
-                  <p style={{ fontFamily: 'var(--font-display)' }} className="text-2xl text-[#555550] group-hover:text-[#EBEBEB] transition-colors tracking-wide mb-1">{project.title}</p>
-                  <p className="text-[10px] text-[#333330] uppercase">{project.category}</p>
+                  <p style={{ fontFamily: 'var(--font-display)' }} className="text-2xl text-[#a8a8a1] group-hover:text-[#EBEBEB] transition-colors tracking-wide mb-1">{project.title}</p>
+                  <p className="text-[10px] text-[#8a8a84] uppercase">{project.category}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[10px] text-[#333330] mb-1">{project.year}</p>
-                  <span className="text-[#333330] group-hover:text-[#EBEBEB] transition-colors text-sm">→</span>
+                  <p className="text-[10px] text-[#8a8a84] mb-1">{project.year}</p>
+                  <span className="text-[#8a8a84] group-hover:text-[#EBEBEB] transition-colors text-sm">→</span>
                 </div>
               </div>
             </Link>

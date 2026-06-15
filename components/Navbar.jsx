@@ -6,15 +6,16 @@ import { useState } from 'react'
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const links = [
+const links = [
     { href: '/work', label: 'Work' },
     { href: '/about', label: 'About' },
     { href: '/skills', label: 'Skills' },
     { href: '/services', label: 'Services' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/blog', label: 'Journal' },
+    { href: '/store', label: 'Shop' },
     { href: '/contact', label: 'Contact' },
-  ]
+]
 
   return (
     <nav className="flex justify-between items-center px-8 py-7 relative z-50">

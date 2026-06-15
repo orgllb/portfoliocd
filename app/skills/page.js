@@ -34,7 +34,7 @@ export default function Skills() {
       <Navbar />
       <main className="flex-1 px-8 py-12">
 
-        <p className="text-[10px] tracking-[0.3em] text-[#444440] uppercase mb-4">
+        <p className="text-[10px] tracking-[0.3em] text-[#999992] uppercase mb-4">
           Skills
         </p>
         <h1
@@ -47,7 +47,7 @@ export default function Skills() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1a1a18]">
           {skillGroups.map((group) => (
             <div key={group.number} className="bg-[#111111] p-10">
-              <p className="text-[10px] tracking-[0.3em] text-[#333330] uppercase mb-8">
+              <p className="text-[10px] tracking-[0.3em] text-[#8a8a84] uppercase mb-8">
                 {group.number} — {group.category}
               </p>
               <ul className="list-none space-y-4">
@@ -56,10 +56,10 @@ export default function Skills() {
                     key={skill}
                     className="flex items-center gap-4 border-b border-[#1a1a18] pb-4"
                   >
-                    <span className="w-1 h-1 bg-[#333330] rounded-full flex-shrink-0" />
+                    <span className="w-1 h-1 bg-[#8a8a84] rounded-full flex-shrink-0" />
                     <span
                       style={{ fontFamily: 'var(--font-display)' }}
-                      className="text-xl text-[#555550] tracking-wide hover:text-[#EBEBEB] transition-colors cursor-default"
+                      className="text-xl text-[#a8a8a1] tracking-wide hover:text-[#EBEBEB] transition-colors cursor-default"
                     >
                       {skill}
                     </span>

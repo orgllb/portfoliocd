@@ -21,7 +21,7 @@ export default function Gallery() {
       <Navbar />
       <main className="flex-1 px-8 py-12">
 
-        <p className="text-[10px] tracking-[0.3em] text-[#444440] uppercase mb-4">
+        <p className="text-[10px] tracking-[0.3em] text-[#999992] uppercase mb-4">
           Gallery
         </p>
         <h1

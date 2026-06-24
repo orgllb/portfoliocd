@@ -17,11 +17,11 @@ export default function NotFound() {
           </span>
 
           <div className="relative z-10 max-w-lg">
-            <p className="text-[10px] text-[#999992] uppercase mb-6">Error 404</p>
+            <p className="text-[12px] text-[#999992] uppercase mb-6">Error 404</p>
             <h1 style={{ fontFamily: 'var(--font-display)' }} className="text-[8rem] text-[#EBEBEB] leading-none mb-8">
               Page Not Found
             </h1>
-            <p className="text-[11px] text-[#a8a8a1] leading-loose mb-10">
+            <p className="text-[13px] text-[#a8a8a1] leading-loose mb-10">
               The page you are looking for does not exist or has been moved.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">

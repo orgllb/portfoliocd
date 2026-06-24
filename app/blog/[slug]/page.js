@@ -27,7 +27,7 @@ export default function BlogPost({ params }) {
           Back to Journal
         </Link>
         <div className="max-w-2xl mt-8">
-          <p className="text-[10px] text-[#999992] uppercase mb-4">{post.category} - {post.date} - {post.readTime} read</p>
+          <p className="text-[12px] text-[#999992] uppercase mb-4">{post.category} - {post.date} - {post.readTime} read</p>
           <h1 style={{ fontFamily: 'var(--font-display)' }} className="text-[5rem] text-[#EBEBEB] leading-none mb-10">{post.title}</h1>
           <hr className="border-t border-[#1a1a18] mb-8" />
           {post.body.map((para, i) => (

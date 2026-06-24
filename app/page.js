@@ -36,7 +36,7 @@ export default function Home() {
 
           {/* Hero */}
           <section className="pt-10 pb-8">
-            <p className="text-[10px] tracking-[0.3em] text-[#999992] uppercase mb-6">
+            <p className="text-[12px] tracking-[0.3em] text-[#999992] uppercase mb-6">
               Bat-Orgil Batbold — Creative Director
             </p>
             <h1 style={{ fontFamily: 'var(--font-display)' }} className="leading-[0.9]">
@@ -57,19 +57,19 @@ export default function Home() {
 
             {/* Bio */}
             <div className="md:border-r border-[#1e1e1c] md:pr-12">
-              <p className="text-[11px] leading-relaxed text-[#a8a8a1] tracking-wide mb-4">
+              <p className="text-[13px] leading-relaxed text-[#a8a8a1] tracking-wide mb-4">
                 Based between Melbourne and the digital world. Crafting visual
                 identities, digital experiences and cultural moments that last.
               </p>
-              <p className="text-[11px] leading-relaxed text-[#a8a8a1] tracking-wide mb-6">
+              <p className="text-[13px] leading-relaxed text-[#a8a8a1] tracking-wide mb-6">
                 Available for select projects in brand direction, web design
                 and art direction.
               </p>
-              <p className="text-[10px] text-[#8a8a84] tracking-[0.2em] uppercase">Based in Melbourne, AU</p>
+              <p className="text-[12px] text-[#8a8a84] tracking-[0.2em] uppercase">Based in Melbourne, AU</p>
               <div className="mt-10">
                 <Link
                   href="/contact"
-                  className="text-[11px] tracking-[0.2em] uppercase text-[#EBEBEB] border-b border-[#a8a8a1] pb-0.5 hover:border-[#EBEBEB] transition-colors"
+                  className="text-[13px] tracking-[0.2em] uppercase text-[#EBEBEB] border-b border-[#a8a8a1] pb-0.5 hover:border-[#EBEBEB] transition-colors"
                 >
                   Start a Project
                 </Link>
@@ -78,7 +78,7 @@ export default function Home() {
 
             {/* Work list */}
             <div>
-              <p className="text-[10px] tracking-[0.3em] text-[#8a8a84] uppercase mb-5">
+              <p className="text-[12px] tracking-[0.3em] text-[#8a8a84] uppercase mb-5">
                 Selected Work
               </p>
               <ul className="list-none">
@@ -92,7 +92,7 @@ export default function Home() {
                         {project.title} — {project.category}
                       </span>
                       <span className="flex items-center gap-4">
-                        <span className="text-[10px] text-[#8a8a84] tracking-[0.2em] uppercase">
+                        <span className="text-[12px] text-[#8a8a84] tracking-[0.2em] uppercase">
                           {project.year}
                         </span>
                         <span className="work-arrow text-[#a8a8a1] text-sm">→</span>
@@ -104,7 +104,7 @@ export default function Home() {
               <div className="mt-6">
                 <Link
                   href="/work"
-                  className="text-[10px] tracking-[0.2em] text-[#999992] uppercase hover:text-[#EBEBEB] transition-colors"
+                  className="text-[12px] tracking-[0.2em] text-[#999992] uppercase hover:text-[#EBEBEB] transition-colors"
                 >
                   View all work →
                 </Link>
@@ -126,7 +126,7 @@ export default function Home() {
                 >
                   {stat.value}
                 </p>
-                <p className="text-[10px] text-[#999992] tracking-[0.2em] uppercase">{stat.label}</p>
+                <p className="text-[12px] text-[#999992] tracking-[0.2em] uppercase">{stat.label}</p>
               </div>
             ))}
           </section>

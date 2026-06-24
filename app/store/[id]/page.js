@@ -37,7 +37,7 @@ export default function ProductDetail({ params }) {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1 px-8 py-12">
-          <p className="text-[11px] text-[#a8a8a1]">Loading product...</p>
+          <p className="text-[13px] text-[#a8a8a1]">Loading product...</p>
         </main>
         <Footer />
       </div>
@@ -49,7 +49,7 @@ export default function ProductDetail({ params }) {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1 px-8 py-12">
-          <p className="text-[11px] text-[#a8a8a1]">Could not load product: {error}</p>
+          <p className="text-[13px] text-[#a8a8a1]">Could not load product: {error}</p>
         </main>
         <Footer />
       </div>
@@ -70,7 +70,7 @@ export default function ProductDetail({ params }) {
           </div>
 
           <div>
-            <p className="text-[10px] text-[#999992] uppercase mb-4">{product.category}</p>
+            <p className="text-[12px] text-[#999992] uppercase mb-4">{product.category}</p>
             <h1 style={{ fontFamily: 'var(--font-display)' }} className="text-[3rem] text-[#EBEBEB] leading-tight mb-6">
               {product.title}
             </h1>
@@ -79,14 +79,14 @@ export default function ProductDetail({ params }) {
             </p>
             <Link
               href={`/contact?item=${encodeURIComponent(product.title)}`}
-              className="inline-block text-[11px] tracking-[0.2em] uppercase text-[#0a0a0a] bg-[#EBEBEB] px-8 py-3 hover:bg-[#cccccc] transition-colors mb-6"
+              className="inline-block text-[13px] tracking-[0.2em] uppercase text-[#0a0a0a] bg-[#EBEBEB] px-8 py-3 hover:bg-[#cccccc] transition-colors mb-6"
             >
               Enquire to Purchase
             </Link>
             <p className="text-[12px] text-[#a8a8a1] leading-loose mb-6">
               {product.description}
             </p>
-            <p className="text-[10px] text-[#8a8a84] uppercase">
+            <p className="text-[12px] text-[#8a8a84] uppercase">
               Rating: {product.rating?.rate} ({product.rating?.count} reviews)
             </p>
           </div>

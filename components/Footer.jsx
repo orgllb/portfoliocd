@@ -13,7 +13,7 @@ export default function Footer() {
           >
             BAT-ORGIL BATBOLD
           </p>
-          <p className="text-[11px] text-[#999992] tracking-[0.2em] uppercase">
+          <p className="text-[13px] text-[#999992] tracking-[0.2em] uppercase">
             Creative Director — Melbourne, AU
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function Footer() {
           ))}
         </ul>
 
-        <p className="text-[11px] text-[#8a8a84] tracking-[0.2em]">
+        <p className="text-[13px] text-[#8a8a84] tracking-[0.2em]">
           © {year} All rights reserved
         </p>
       </div>

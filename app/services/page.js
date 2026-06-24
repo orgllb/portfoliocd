@@ -39,7 +39,7 @@ export default function Services() {
       <Navbar />
       <main className="flex-1 px-8 py-12">
 
-        <p className="text-[10px] tracking-[0.3em] text-[#999992] uppercase mb-4">
+        <p className="text-[12px] tracking-[0.3em] text-[#999992] uppercase mb-4">
           Services
         </p>
         <h1
@@ -73,19 +73,19 @@ export default function Services() {
 
               {/* Description */}
               <div>
-                <p className="text-[11px] text-[#a8a8a1] leading-loose">
+                <p className="text-[13px] text-[#a8a8a1] leading-loose">
                   {service.description}
                 </p>
               </div>
 
               {/* Deliverables */}
               <div>
-                <p className="text-[10px] tracking-[0.2em] text-[#8a8a84] uppercase mb-4">
+                <p className="text-[12px] tracking-[0.2em] text-[#8a8a84] uppercase mb-4">
                   Deliverables
                 </p>
                 <ul className="list-none space-y-2">
                   {service.deliverables.map((item) => (
-                    <li key={item} className="text-[10px] text-[#999992] tracking-wider flex items-center gap-2">
+                    <li key={item} className="text-[12px] text-[#999992] tracking-wider flex items-center gap-2">
                       <span className="w-3 h-px bg-[#8a8a84] flex-shrink-0" />
                       {item}
                     </li>
@@ -105,13 +105,13 @@ export default function Services() {
             >
               Ready to work together?
             </p>
-            <p className="text-[11px] text-[#a8a8a1]">
+            <p className="text-[13px] text-[#a8a8a1]">
                 Available for select projects — let&apos;s talk about yours.
             </p>
           </div>
           <Link
             href="/contact"
-            className="text-[11px] tracking-[0.2em] uppercase text-[#EBEBEB] border-b border-[#a8a8a1] pb-0.5 hover:border-[#EBEBEB] transition-colors"
+            className="text-[13px] tracking-[0.2em] uppercase text-[#EBEBEB] border-b border-[#a8a8a1] pb-0.5 hover:border-[#EBEBEB] transition-colors"
           >
             Get In Touch →
           </Link>

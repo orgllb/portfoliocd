@@ -21,7 +21,7 @@ export default function Gallery() {
       <Navbar />
       <main className="flex-1 px-8 py-12">
 
-        <p className="text-[10px] tracking-[0.3em] text-[#999992] uppercase mb-4">
+        <p className="text-[12px] tracking-[0.3em] text-[#999992] uppercase mb-4">
           Gallery
         </p>
         <h1
@@ -47,7 +47,7 @@ export default function Gallery() {
               />
               {/* Label on hover */}
               <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-[#111111] to-transparent">
-                <p className="text-[10px] text-[#888880] tracking-[0.2em] uppercase">
+                <p className="text-[12px] text-[#888880] tracking-[0.2em] uppercase">
                   {item.label}
                 </p>
               </div>

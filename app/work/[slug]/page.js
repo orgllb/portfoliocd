@@ -29,12 +29,12 @@ export default function ProjectPage({ params }) {
         </Link>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <p className="text-[10px] text-[#999992] uppercase mb-4">{project.category} - {project.year}</p>
+            <p className="text-[12px] text-[#999992] uppercase mb-4">{project.category} - {project.year}</p>
             <h1 style={{ fontFamily: 'var(--font-display)' }} className="text-[5rem] text-[#EBEBEB] leading-none mb-8">{project.title}</h1>
-            <p className="text-[11px] text-[#b8b8b1] leading-loose mb-8">{project.description}</p>
+            <p className="text-[13px] text-[#b8b8b1] leading-loose mb-8">{project.description}</p>
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
-                <span key={tag} className="text-[10px] text-[#a8a8a1] border border-[#222220] px-3 py-1 uppercase">{tag}</span>
+                <span key={tag} className="text-[12px] text-[#a8a8a1] border border-[#222220] px-3 py-1 uppercase">{tag}</span>
               ))}
             </div>
           </div>

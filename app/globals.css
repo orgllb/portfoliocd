@@ -36,7 +36,7 @@ body {
 }
 
 .work-title {
-  color: #2e2e2c;
+  color: #a8a8a1;
   transition: color 0.25s ease;
   font-family: var(--font-display);
 }
